@@ -1,2 +1,9 @@
 #!/bin/sh
-echo "release"
+
+cat << EOF
+---
+addons:
+  - heroku-tesseract
+default_process_types:
+  web: bin/node server.js
+EOF
